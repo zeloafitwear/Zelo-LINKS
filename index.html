@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ZELO Fitwear</title>
+<meta name="description" content="ZELO Fitwear. Força silenciosa. Cuidado em cada detalhe.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0C0C0C;
+  --ink:#F2F2F2;
+  --muted:#8E8E8E;
+  --line:rgba(242,242,242,.26);
+  --sans:'Montserrat','Helvetica Neue',Arial,sans-serif;
+  color-scheme:dark;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+*{box-sizing:border-box;margin:0}
+html{height:100%;scroll-padding-top:env(safe-area-inset-top,0px);-webkit-text-size-adjust:100%}
+body{min-height:100%;background:var(--bg);color:var(--ink);font-family:var(--sans);font-weight:300;display:flex;justify-content:center}
+.page{
+  width:100%;max-width:420px;min-height:100vh;min-height:100dvh;
+  display:flex;flex-direction:column;align-items:center;
+  padding:clamp(56px,11vh,104px) 28px 32px;
+}
+.brand{display:flex;flex-direction:column;align-items:center;text-align:center}
+.logo{display:block;width:112px;height:auto}
+.name{margin-top:30px;font-size:.66rem;letter-spacing:.5em;padding-left:.5em;font-weight:400;color:var(--muted)}
+.rule{width:24px;height:1px;background:var(--ink);opacity:.7;margin:30px 0 28px}
+.tagline{font-weight:300;font-size:1.5rem;line-height:1.2;letter-spacing:.04em}
+.sub{margin-top:10px;font-size:.78rem;letter-spacing:.12em;color:var(--muted);font-weight:300}
+.actions{width:100%;margin-top:clamp(44px,8vh,72px);display:flex;flex-direction:column;gap:14px}
+.btn{
+  position:relative;display:flex;align-items:center;justify-content:center;gap:12px;
+  min-height:54px;padding:0 24px;color:var(--ink);text-decoration:none;
+  border:1px solid var(--line);border-radius:2px;
+  font-size:.7rem;letter-spacing:.34em;font-weight:500;
+  overflow:hidden;isolation:isolate;
+  transition:border-color .45s ease,color .45s ease;
+  -webkit-tap-highlight-color:transparent;
+}
+.btn::before{content:"";position:absolute;inset:0;z-index:-1;background:var(--ink);transform:scaleY(0);transform-origin:bottom;transition:transform .45s cubic-bezier(.2,.7,.2,1)}
+.btn svg{width:18px;height:18px;flex:none;fill:none;stroke:currentColor;stroke-width:1.3;stroke-linecap:round;stroke-linejoin:round}
+.btn span{padding-left:.34em}
+@media (hover:hover){.btn:hover{color:var(--bg);border-color:var(--ink)}.btn:hover::before{transform:scaleY(1)}}
+.btn:active{color:var(--bg);border-color:var(--ink)}
+.btn:active::before{transform:scaleY(1)}
+.btn:focus-visible{outline:1px solid var(--ink);outline-offset:4px}
+footer{margin-top:auto;padding-top:56px;text-align:center}
+.f-name{font-size:.58rem;letter-spacing:.5em;padding-left:.5em;font-weight:400;color:var(--muted)}
+.f-line{margin-top:8px;font-size:.68rem;letter-spacing:.1em;color:var(--muted);opacity:.75}
+.reveal{opacity:0;transform:translateY(8px);animation:in .9s cubic-bezier(.2,.7,.2,1) forwards}
+.d1{animation-delay:.05s}.d2{animation-delay:.25s}.d3{animation-delay:.45s}.d4{animation-delay:.65s}
+@keyframes in{to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.reveal{animation:none;opacity:1;transform:none}.btn,.btn::before{transition:none}}
+@media (min-width:700px){.page{padding-top:112px}}
+</style>
+</head>
+<body>
+<main class="page">
+  <header class="brand">
+    <img class="logo reveal d1" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALYAAAD6CAYAAAAMar0TAAAERklEQVR42u3dy3IbORBFQQLB///l8tYLBV/oBgqFzO2MRKp5+goca+QWEY/Jpj8gy7XZD9hdcyoSNsIGYYOwQdggbIQNwgZhg7BB2CBshA3CBmGDsEHYIGyEDcIGYYOwQdgIG4QNwgZhg7BB2AgbangueMzmsl/C7xm32OWCDjdhvsXGQltstlzo5TemxRaCxcZC73KzWmwLbbGx0LvcwBbbQltsLPQuN7XFttAWGwu9y41usS20xcZC73LzW2wLXZKwBb1KE7agBS1sQZ8ctLAFXTJoYQu6ZNDCFnTJoIUt6JJBC1vQJYMWtqBLBi1sQZcM+uSwBV046BPDFvQBQZ8UtqAPCvqEsAV9YNCVwxb0wUFXDFvQgi4VtqAFXSpsQQu6VNiCFnSpsAUt6FJhC1rQpcIWtKBLhS1oQZcKW9CCLhW2oAVdKmxBC7pU2IIWdKmwBS3oUmELWtClwha0oEuFLWhBH/nmEUHfrnuhlgbtWllsC83axfbiWWiLbaHZabG9oBbaYltodlrs015kC22xLTR7L3blF95CW2wLTb3FrhKDhbbYFpozFnvHQCy0xbbQnB12e+T/eW0/T15gLLprjjM2CBuEDcIGYSNsEDYIG4QNwgZhI2wQNggbhA3CBmEjbBA2CBuEDcJG2CBsEDYIG4QNwkbYIGzIasUvfveL1bHYIGwQNsIGYYOwQdggbIQNwgZhg7BB2CBshA3CBmGDsEHYIGyEDcIGYYOwQdggbIQNwgZhg7BB2AgbhA3CBmGDsEHYCBuEDcIGYYOwQdgIG4QNwgZhg7BB2AgbhA3CBmGDsBE2CBuEDcIGYYOwETYIG4QNwgZhg7ARNggbhA3CBmEjbBA27OHpEjBBfPDvtKvDjiRffLvpgmV73nHj9dgp5Hcf00bDhlUxf/r5vo7cGZuMUf/1+UPYzAw6Mt5AwibrSg89rjM2O75hj3dnb4vNblF/9HyETcmbzVGEmWvdZn0XeD7u+YOAuOALvlLT5bKo2xf/PAaeX3MUYUbU7YdB+eVj/nyePcGFsKb1tAs+fuhzdFFz8evZFt4gkeEoImpu0xfe3dRb6wwDGFeG7QjiTJ3q8/eCFwEuCdsRxDEk3fPvky+AtXYMmfI4veAFgKGfFdnp21W4UZ2xHUE4MmxRs+q1bXeGDeUW21pTLmxRU/7No6gpEbY/XSRDFx8/3vOGJ59xrX0HsdgCon7YjiCUC9t/BeH4o4ioa/nm9Zz1Xf2bx2ndEYRTFtsRhDvXdMrnHz2KiNpxJOXz7o4gJF/tnz5vdwThwtc4stwsXdQkXe4YuRH7hLuY887aI383TYxG/Xj89vc8RqILmOFduxv9/XVvs18jv/j9rDdjbeDjItnX8vLr8r+Gsft3pvbqzSPsGLe/NYxycb98HsJmx7jfPr43j4zGFRlvKIvNLuv91eNYbLKv9083Tovwc0/cImbH/L9/ChSaahUpMx0AAAAASUVORK5CYII=" alt="ZELO" width="182" height="250">
+    <p class="name reveal d1">ZELO FITWEAR</p>
+    <div class="rule reveal d2" aria-hidden="true"></div>
+    <h1 class="tagline reveal d2">Força silenciosa.</h1>
+    <p class="sub reveal d3">Cuidado em cada detalhe.</p>
+  </header>
+  <nav class="actions reveal d4" aria-label="Canais oficiais">
+    <a class="btn" href="https://www.instagram.com/usezelofit/" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r=".6" fill="currentColor"/></svg>
+      <span>INSTAGRAM</span>
+    </a>
+    <a class="btn" href="https://wa.me/message/DTJOIM6PKEENK1" target="_blank" rel="noopener noreferrer">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3.8 20.2l1.2-4.2A8.2 8.2 0 1 1 8.2 19z"/><path d="M9.2 8.6c.2 2.4 2.6 5 5.2 5.6l1.1-1.1-1.9-1-.8.7c-.9-.4-1.7-1.2-2.1-2.1l.7-.8-1-1.9z"/></svg>
+      <span>WHATSAPP</span>
+    </a>
+  </nav>
+  <footer class="reveal d4">
+    <p class="f-name">ZELO FITWEAR</p>
+    <p class="f-line">Cuidado em cada detalhe.</p>
+  </footer>
+</main>
+</body>
+</html>
